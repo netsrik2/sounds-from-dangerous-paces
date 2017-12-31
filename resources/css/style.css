@@ -1,0 +1,344 @@
+/* 
+#ccc;
+#d1d1d1;
+#f90;
+#9f5719;
+#804614;
+*/
+
+/* http://www.0to255.com/ */
+
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+html {
+    font-size: 18px;/* 100%; */ 
+    box-sizing: border-box;
+    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*
+* {
+    margin: 0;
+    padding:0;
+}
+*/
+
+
+body {
+    font-family: 'Lato', Helvetica,
+                Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #454545;
+    /* text-rendering: optimizeLegibility; */
+    /* overflow-x: hidden; */
+
+}
+
+/* ----------------------------------------------- */
+/* UTILITIES */
+/* ----------------------------------------------- */
+
+/* ----- CLEAR FIX ----- */
+/*
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+*/
+
+/* micro-clearfix by Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+/* for modern browsers */
+
+.u-cf:before,
+.u-cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.u-cf:after {
+    clear: both;
+}
+
+ /* For IE 6/7 only to trigger hasLayout and contain floats */
+.u-cf {
+    *zoom: 1;
+}
+/* 
+.cf {clear:both;}
+*/
+
+/* visibility */
+.u-invis	{
+	position: absolute;
+	left: -9999px;
+}
+.u-hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.u-visuallyhidden {
+  
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.u-visuallyhidden.focusable:active,
+.u-visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.u-invisible {
+    visibility: hidden;
+}
+
+.u-wrap {
+    /* padding: 1em; */
+}
+/* clarify and specify this utility */
+.u-row {
+    /* width: 95%; */
+    max-width: 1140px; 
+    margin: 0 auto;
+}
+
+/* fluid images */
+img {
+    max-width: 100%;
+}
+
+
+
+
+
+/* ----------------------------------------------- */
+/* COMPONENTS */
+/* ----------------------------------
+
+/* ----- HEADINGS ----- */
+h1, h2, h3, h4, h5, h6 {
+    
+    /* var */
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .01em; /*1px;*/ 
+    /* var */
+}
+
+h1 {
+}
+
+
+/* ----- HEADER/MASTHEAD----- */
+.c-masthead {
+   
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(img/caspian-night-fire.jpg);
+    background-size: cover;
+    background-position: center;
+    /* height: 100vh; */
+    color: #ccc;
+}
+.c-masthead a {
+text-decoration: none;    
+}
+/* move to mobile first media query 
+.c-masthead__text-box {
+    
+    position: absolute;
+    width: 1140px; 
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+}
+*/
+.c-masthead__title {
+    font-weight: 300;
+    font-size: 240%;
+    margin-top: 0; /* remove default margin from normalize */
+    /* clear: right; */
+    
+}
+.c-masthead__pullquote {
+    margin-left: 0;
+    margin-bottom: 1.3em; 
+    font-size: 1.3em;/* !!! establish systmatic typographic scale !!! */
+    color:#d1d1d1;
+    
+}
+
+/* main nav */
+
+.c-main-nav {
+    padding-right: 1em;
+    
+}
+.c-main-nav__items {
+    float: right;
+    margin-top: 1em;
+    list-style: none;
+    text-align: right;
+
+    
+}
+.c-main-nav__items li {
+    /* display: inline-block; */
+    margin-left: 1em;
+    margin-bottom:9px;
+
+    /* text-transform: uppercase; */
+}
+@media only screen and (min-width: 46em) {
+    .c-main-nav__items li {
+        display: inline-block;
+     }
+}
+@media only screen and (min-width: 75em) {
+
+    .c-masthead {
+        height: 100vh;
+    }
+    .c-masthead__text-box {
+    
+    position: absolute;
+    width: 1140px; 
+    /* width: 90%; */
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+    }
+    
+}
+.c-main-nav a {
+    padding-bottom:5px;
+    border-bottom: 3px solid transparent;
+}
+.c-main-nav a:focus,
+.c-main-nav a:hover,
+.c-main-nav a:active {
+    border-bottom: 3px solid #804614;;
+}
+
+/* ----- SECTION CONTENT ----- */
+
+/* .c-tracklist */
+
+.c-tracklist--multi {
+    list-style-type: ;
+}
+
+/* buttons */
+
+/* clarify whether link and visited states need to specified here or whether both set by higher level a */
+.c-btn {
+    display: inline-block;
+    padding: .7em 1em;
+    border-radius: 200px;
+    border: 1px solid;
+    /* var */
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    /* var */
+    transition: all 0.3s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.c-btn:link, .c-btn:visited {
+    display: inline-block;
+    padding: .7em 1em;
+    border-radius: 200px;
+    border: 1px solid;
+    /* var */
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    /* var */
+    transition: all 0.3s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+/* 
+  .c-btn--full {
+  background-color: #9f5719;
+  color: #d1d1d1;
+  border-color: #9f5719;
+*/
+
+.c-btn--full:link, .c-btn--full:visited {
+  background-color: #9f5719;
+  color: #d1d1d1;
+  border-color: #9f5719;
+}
+.c-btn--full:focus, .c-btn--full:hover {
+  background-color: #804614;
+  border-color: #804614;
+}
+.c-btn--full:active {
+    background-color:transparent;
+    color: #804614; 
+}
+/* links */
+a {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+    padding: 5px 0; 
+    padding: 2px 1px 0;
+    /* transition */
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+/* 
+
+Link (unvisited): The default state that a link resides in, when it isn't in any other state. This can be specifically styled using the :link pseudo class.
+
+Visited: A link when it has already been visited (exists in the browser's history), styled using the :visited pseudo class.
+Hover: A link when it is being hovered over by a user's mouse pointer, styled using the :hover pseudo class.
+
+Focus: A link when it has been focused (for example moved to by a keyboard user using the Tab key or similar, or programmatically focused using HTMLElement.focus()) — this is styled using the :focus pseudo class.
+
+Active: A link when it is being activated (e.g. clicked on), styled using the :active pseudo class.
+
+a {}
+
+a:link {}
+
+a:visited {}
+
+a:focus {}
+
+a:hover {}
+
+a:active {}
+
+This order is important because the link styles build on one another, for example the styles in the first rule will apply to all the subsequent ones, and when a link is being activated, it is also being hovered over. If you put these in the wrong order, things won't work properly. To remember the order, you could try using a mnemonic like LoVe Fears HAte.
+*/
